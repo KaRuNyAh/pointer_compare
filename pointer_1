@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(){
+    int i;
+    char *k;
+    char s1[20];
+    gets(s1);
+    k=&s1[0];
+    for(i=0;s1[i]!='\0';i++){
+        if(s1[i]<*k)
+           k=&s1[i];
+    }
+    printf("%c",*k);
+}
